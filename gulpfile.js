@@ -38,7 +38,8 @@ const sass=require("gulp-sass")
 gulp.task("packscss",()=>{
 	gulp.src([
 		"./src/styles/app.scss",
-		"./src/styles/app-mall.scss"
+		"./src/styles/app-mall.scss",
+		"./src/styles/app-server.scss"
 	])
 	.pipe(sass().on("error",sass.logError))
 	.pipe(gulp.dest("./dev/styles"))
@@ -52,7 +53,8 @@ gulp.task("packjs",()=>{
 		mode:'development',
 		entry:{
 			app:['@babel/polyfill','./src/scripts/app.js'],
-			"app-mall":['@babel/polyfill','./src/scripts/app-mall.js']
+			"app-mall":['@babel/polyfill','./src/scripts/app-mall.js'],
+			"app-server":['@babel/polyfill','./src/scripts/app-server.js']
 		},
 		output:{
 			filename:"[name].js"
