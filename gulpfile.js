@@ -18,15 +18,15 @@ gulp.task("server",()=>{
 		port:8080,
 		livereload:true,
 		middleware:[
-		  proxy('/api',{
+		  proxy('/v4',{
 //		  	target:'https://m.lagou.com/',
-		  	target:'http://localhost:3000',
+		  	target:'https://m.maizuo.com',
 		  	changeOrigin:true,
 //		  	pathRewrite: {
 //          '/api' : ''
 //          },
 		  	
-		  })
+			})
 		]
 	}))
 })
@@ -36,7 +36,10 @@ gulp.task("server",()=>{
 const sass=require("gulp-sass")
 //1.安装sass插件 yarn add gulp-sass node-sass --dev
 gulp.task("packscss",()=>{
-	gulp.src("./src/styles/app.scss")
+	gulp.src([
+		"./src/styles/app.scss",
+		"./src/styles/app-mall.scss"
+	])
 	.pipe(sass().on("error",sass.logError))
 	.pipe(gulp.dest("./dev/styles"))
 })
@@ -48,10 +51,11 @@ gulp.task("packjs",()=>{
 	.pipe(webpack({
 		mode:'development',
 		entry:{
-			app:['@babel/polyfill','./src/scripts/app.js']
+			app:['@babel/polyfill','./src/scripts/app.js'],
+			"app-mall":['@babel/polyfill','./src/scripts/app-mall.js']
 		},
 		output:{
-			filename:"app.js"
+			filename:"[name].js"
 		},
 		module:{
 			rules:[
@@ -70,8 +74,6 @@ gulp.task("packjs",()=>{
 	              }
 	            }
 	          }
-			
-			
 			]
 		}
 	}))
@@ -81,10 +83,11 @@ gulp.task("packjs",()=>{
 const watch=require('gulp-watch')
 gulp.task('watch',()=>{
 	gulp.watch('./src/*.html',['copyhtml'])
-	watch('./src/styles/**/*',()=>{
+ 	gulp.watch('./src/styles/**/*',()=>{
+		console.log(1);
 		gulp.start(['packscss'])
 	})
-	watch('./src/libs/**/*', () => {
+	gulp.watch('./src/libs/**/*', () => {
     gulp.start(['copylibs'])
   })
 	gulp.watch("./src/scripts/**/*",['packjs'])

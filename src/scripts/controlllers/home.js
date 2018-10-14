@@ -1,7 +1,7 @@
 import homeTpl from "../views/home.html"
 const render = () => {
 	document.querySelector("#root").innerHTML=homeTpl;
-	changeTab()
+	// changeTab()
 }
 const changeTab=()=>{
 	$('nav li').on('tap',function(){

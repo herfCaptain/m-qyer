@@ -1,0 +1,83 @@
+<!-- 自由行 -->
+<div class="main">
+        <ul>
+            <li>
+                <i class="yo-ico">&#xe674;</i>
+                <b>自由行</b>
+            </li>
+            <li>
+                <i class="yo-ico">&#xe6b1;</i>
+                <b>特价机票</b>
+            </li>
+            <li>
+                <i class="yo-ico">&#xe70c;</i>
+                <b>当地玩乐</b>
+            </li>
+            <li>
+                <i class="yo-ico">&#xe654;</i>
+                <b>签证</b>
+            </li>
+            <li>
+                <i class="yo-ico">&#xe688;</i>
+                <b>租车自驾</b>
+            </li>
+            <li>
+                <i class="yo-ico">&#xe6e3;</i>
+                <b>酒店</b>
+            </li>
+            <li>
+                <i class="yo-ico">&#xe68b;</i>
+                <b>游轮</b>
+            </li>
+            <li>
+                <i class="yo-ico">···</i>
+                <b>全部</b>
+            </li>
+        </ul>
+</div>
+    <!-- 门票 -->
+<div class="sublist">
+    <ul>
+        <li>
+            <i class="yo-ico">&#xe645;</i>
+            <b>门票/票券</b>
+        </li>
+        <li>
+            <i class="yo-ico">&#xe686;</i>
+            <b>当地游</b>
+        </li>
+        <li>
+            <i class="yo-ico">&#xe66c;</i>
+            <b>WiFi/电话卡</b>
+        </li>
+        <li>
+            <i class="yo-ico">&#xe65a;</i>
+            <b>交通票券</b>
+        </li>
+        <li>
+            <i class="yo-ico">&#xe663;</i>
+            <b>当地参团</b>
+        </li>
+        <li>
+            <i class="yo-ico">&#xe70e;</i>
+            <b>接送机/包车</b>
+        </li>
+    </ul>
+</div>
+<!-- 精选折扣 -->
+<div class="select">
+    <h2>精选折扣</h2>
+    <ul>
+        {{#each list}}
+        <li>
+            <div>
+                <img src="{{cover.origin}}"/>
+            </div>
+            <h3>{{intro}}</h3>
+            <p class="price">
+                <em>{{id}}</em>元起
+            </p>
+        </li>
+        {{/each}}
+    </ul>
+</div>
