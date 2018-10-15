@@ -67,11 +67,11 @@
 <!-- 精选折扣 -->
 <div class="select">
     <h2>精选折扣</h2>
-    <ul>
+    <ul class="sel">
         {{#each list}}
         <li>
             <div>
-                <a href="../../reserve.html"><img src="{{cover.origin}}"/></a>
+                <a href="../../reserve.html#{{id}}"><img src="{{cover.origin}}"/></a>
             </div>
             <h3>{{intro}}</h3>
             <p class="price">
@@ -81,3 +81,4 @@
         {{/each}}
     </ul>
 </div>
+<!-- ../../reserve.html -->

@@ -25,8 +25,15 @@ gulp.task("server",()=>{
 //		  	pathRewrite: {
 //          '/api' : ''
 //          },
-		  	
-			})
+			}),
+		  proxy('/x5',{
+//		  	target:'https://m.lagou.com/',
+				target:'https://m.maizuo.com',
+				changeOrigin:true,
+//		  	pathRewrite: {
+//          '/api' : ''
+//          },
+			})	
 		]
 	}))
 })
