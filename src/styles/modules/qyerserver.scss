@@ -1,0 +1,286 @@
+#Server{
+    height: 100%;
+}
+@font-face {
+    font-family: 'yofont';
+    src: url('/iconfont.eot');
+    src: url('/iconfonts/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('/iconfonts/iconfont.woff') format('woff'),
+    url('/iconfonts/iconfont.ttf') format('truetype'),
+    url('/iconfonts/iconfont.svg#iconfont') format('svg');
+}
+.server-containers{
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    header{
+        height: 2.83rem;
+        width: 100%;
+        background: white;
+        div:nth-child(1){
+            width: 100%;
+            height: 2.11rem;
+            img{
+                width: 100%;
+                height: 2.11rem;
+            }
+        }
+        h1{
+            @include flexbox();
+            @include flex-wrap(wrap);
+            margin-top: 0.08rem;
+            width: 100%;
+            height: 0.4rem;
+            line-height: 0.2rem;
+            padding: 0 0.1rem;
+            font-weight: 100;
+        }
+        .info{
+            @include flexbox();
+            @include flex-direction(row);
+            padding: 0 0.1rem;
+            width: 100%;
+            height: 0.22rem;
+            .price{
+                em{
+                    font-size: 0.2rem;
+                    color: #ff7466;
+                    line-height: 0.22rem;
+                }
+            }
+            .floorGuide{
+                @include flexbox();
+                @include flex-direction(column);
+                line-height: 0.22rem;
+                a{
+                    color: #40c995;
+                    text-decoration: underline;
+                    font-size: 0.12rem;
+                    width: 0.5rem;
+                    margin-left: -1.2rem;
+                }
+            }
+            .browse,.sold{
+                line-height: 0.22rem;
+                width: 1.3rem;
+                color: #a5a5a7;
+                font-size: 0.12rem;
+                font-weight: 100;
+            }
+            .browse{
+                width: 1.6rem;
+            }
+        }
+    }
+    .APP{
+        margin-top: 0.1rem;
+        width: 100%;
+        height: 0.46rem;
+        background: white;
+        a{
+            padding-left: 0.1rem;
+            span:nth-child(1){
+                background: #ff7467;
+                color: white;
+                line-height: 0.46rem;
+                padding: 0.03rem 0.06rem;
+                border-radius: 8%;
+                font-size: 0.13rem;
+            }
+            span:nth-child(2){
+                margin-left: 0.06rem;
+                color: #4b4c4f;
+                line-height: 0.46rem;
+            }
+        }
+    }
+    .choose{
+        margin-top: 0.1rem;
+        width: 100%;
+        height: 0.6rem;
+        background: white;
+        a{
+            div:nth-child(1){
+                line-height: 0.3rem;
+                padding-left: 0.1rem;
+                i{
+                    font-size: 0.15rem;
+                    font-weight: bold;
+                }
+                span{
+                    font-weight: bold;
+                    color: #505053;
+                    line-height: 0.3rem;
+                    margin-left: 0.06rem;
+                }
+            }
+            div:nth-child(2){
+                span{
+                    font-size: 0.12rem;
+                    color: #a5a5a7;
+                    line-height: 0.2rem;
+                    padding-left: 0.15rem;
+                }
+            }
+        }
+    }
+    .Sec-confirm{
+        @include flexbox();
+        @include flex-direction(row);
+        margin-top: 0.1rem;
+        width: 100%;
+        height: 0.6rem;
+        background: white;
+        padding-left: 0.1rem;
+        padding-right: 0.1rem;
+        i{
+            color: #ff7467;
+            font-weight: bold;
+            line-height: 0.6rem;
+            font-weight: bold;
+        }
+        div:nth-child(2){
+            @include flexbox();
+            @include flex-wrap(wrap);
+            width: 0.28rem;
+            font-size: 0.12rem;
+            color: #ff7467;
+            margin-top: 0.13rem;
+            font-weight: bold;
+            margin-left: 0.03rem;
+        }
+        div:nth-child(3){
+            color: #444444;
+            margin-top: 0.1rem;
+            margin-left: 0.12rem;
+        }
+    }
+    .remark{
+        width: 100%;
+        margin-top: 0.1rem;
+        a{
+            height: 0.4rem;
+            width: 100%;
+            line-height: 0.4rem;
+            div{
+                background: white;
+                i{
+                    color: #57c99b;
+                    padding-left: 0.1rem;
+                    font-weight: 700;
+                    font-size: 0.16rem;
+                }
+                span{
+                    color: #505053;
+                    font-weight: 700;
+                }
+            }
+        }
+        .allRemark{
+            width: 100%;
+            height: 1.23rem;
+            background: white;
+            div:nth-child(1){
+                @include flexbox();
+                @include flex-direction(wrap);
+                width: 100%;
+                padding:0 0.1rem;
+                >div:nth-child(1){
+                    width: 0.38rem;
+                    height: 0.38rem;
+                    background: #fe7797;
+                    border-radius: 50%;
+                }
+                div:nth-child(2){
+                    width: 88%;
+                    @include flexbox();
+                    @include flex-direction(column);
+                    div:nth-child(1){
+                        @include flexbox();
+                        @include flex-direction(row);
+                        justify-content: space-between;
+                        height: 0.14rem;
+                        width: 100%;
+                        line-height: 0.14rem;
+                        i{
+                            font-size: 0.14rem;
+                        }
+                        span{
+                            font-size: 0.12rem;
+                            color: #999898;
+                        }
+                    }
+                    div:nth-child(2){
+                        width: 100%;
+                        height: 0.3rem;
+                        line-height: 0.3rem;
+                        i{
+                            padding-left: 0.1rem;
+                            color: #ff7467;
+                            font-size: 0.16rem;
+                        }
+                    }
+                    div:nth-child(3){
+                        height: 0.34rem;
+                        line-height: 0.34rem;
+                        color: #646566;
+                        padding-left: 0.1rem;
+                    }
+                }
+            }
+            .checkAll{
+                text-align: center;
+                a{
+                    border: 1px solid #40c995;
+                    border-radius: 0.05rem;
+                    display: block;
+                    position: relative;
+                    left: 40%;
+                    width: 1.02rem;
+                    height: 0.24rem;
+                    color: #40c995;
+                    line-height: 0.24rem;
+                }
+            }
+        }
+    }
+    .white{
+        width: 100%;
+        height: 0.44rem;
+        background: white;
+    }
+    footer{
+        @include flexbox();
+        @include flex-direction(row);
+        width: 100%;
+        height: 0.44rem;
+        position: fixed;
+        bottom: 0;
+        div:nth-child(1){
+            width: 2.62rem;
+            height: 0.44rem;
+            background: #737373;
+            font-weight: 600;
+            font-size: 0.18rem;
+            color: white;
+            line-height: 0.44rem;
+            padding-left: 0.1rem;
+            padding-left: 0.1rem;
+            span{
+                font-size: 0.15rem;
+            }
+        }
+        div:nth-child(2){
+            width: 1.12rem;
+            height: 0.44rem;
+            background: #ff7467;
+            line-height: 0.44rem;
+            padding-left: 0.1rem;
+            span{
+                font-size: 0.22rem;
+                font-weight: 800;
+                color: white;
+            }
+        }
+    }
+}
