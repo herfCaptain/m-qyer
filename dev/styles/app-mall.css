@@ -785,9 +785,11 @@ a {
   .qyer-containers header {
     height: 1.62rem;
     width: 100%; }
-    .qyer-containers header div img {
+    .qyer-containers header img {
       width: 100%;
       height: 1.62rem; }
+    .qyer-containers header .swiper-pagination span {
+      background: white; }
   .qyer-containers .main {
     background: white; }
     .qyer-containers .main ul {
