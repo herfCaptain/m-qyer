@@ -3241,7 +3241,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _vie
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = \"<div class=\\\"home-containers\\\">\t<header>拉勾网<a href=\\\"../../Mall.html#hapge\\\">点我</a></header>\t<main></main>\t<nav>\t\t<ul>\t\t\t<li>\t\t\t\t<i class=\\\"yo-ico\\\">&#xe6b8;</i>\t       \t\t<b>职位2</b>\t      </li>\t      <li>\t        <i class=\\\"yo-ico\\\">&#xe65c;</i>\t        <b>搜索</b>\t      </li>\t      <li>\t        <i class=\\\"yo-ico\\\">&#xe7d5;</i>\t        <b>我的</b>\t      </li>\t\t</ul>\t</nav></div>\"\n\n//# sourceURL=webpack:///./src/scripts/views/home.html?");
+eval("module.exports = \"<div class=\\\"home-containers\\\">\t<header>拉勾网\t\t<a href=\\\"../../Mall.html#hapge\\\">点我</a>\t\t<a href=\\\"../../signUpBox.html\\\">登录</a>\t</header>\t<main></main>\t<nav>\t\t<ul>\t\t\t<li>\t\t\t\t<i class=\\\"yo-ico\\\">&#xe6b8;</i>\t       \t\t<b>职位2</b>\t      </li>\t      <li>\t        <i class=\\\"yo-ico\\\">&#xe65c;</i>\t        <b>搜索</b>\t      </li>\t      <li>\t        <i class=\\\"yo-ico\\\">&#xe7d5;</i>\t        <b>我的</b>\t      </li>\t\t</ul>\t</nav></div>\"\n\n//# sourceURL=webpack:///./src/scripts/views/home.html?");
 
 /***/ }),
 
