@@ -1,13 +1,15 @@
-// import Router from './utils/router'
 import homeController from './controlllers/home'
-// import positionController from './controlllers/position'
-// import searchController from './controlllers/search'
-// import profileController from './controlllers/profile'
+import bannerController from './controlllers/banner'
+import searchController from './controlllers/search'
+import navController from './controlllers/index-nav'
+import productController from './controlllers/product'
+import bbsController from './controlllers/index-bbs'
+import mallController from './controlllers/index-qyer-mall'
 
 homeController.render()
-
-// const router = new Router()
-// router.init()
-// router.route('#position', positionController.render)
-// router.route('#search', searchController.render)
-// router.route('#profile', profileController.render)
+bannerController.render()
+searchController.render()
+navController.render()
+productController.render()
+bbsController.render();
+mallController.render();
