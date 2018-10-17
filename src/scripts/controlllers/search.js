@@ -1,7 +1,7 @@
 import searchTpl from '../views/search.html'
 
 const render = () => {
-  $('main').html(searchTpl)
+  $('.index-search').html(searchTpl)
 }
 
 export default {

@@ -33,7 +33,29 @@ gulp.task("server",()=>{
 //		  	pathRewrite: {
 //          '/api' : ''
 //          },
-			})	
+				
+		  	
+			}),
+		   proxy('/qcross',{
+		   	//http://www.qyer.com/qcross/home/index.php?action=recommend&timer=1539683491158&ajaxID=59b0b70acebeb65c1882399e
+		  	target:'http://www.qyer.com/',
+		  	//target:'http://localhost:3000',
+		  	changeOrigin:true,
+//		  	pathRewrite: {
+//          '/api' : ''
+//          },
+		  	
+		  }),
+		   proxy('/qcross',{
+		   	//http://www.qyer.com/qcross/home/index.php?action=recommend&timer=1539683491158&ajaxID=59b0b70acebeb65c1882399e
+		  	target:'http://www.qyer.com/',
+		  	//target:'http://localhost:3000',
+		  	changeOrigin:true,
+//		  	pathRewrite: {
+//          '/api' : ''
+//          },
+		  	
+		  }),
 		]
 	}))
 })
@@ -116,7 +138,16 @@ gulp.task('copymock', () => {
   return gulp.src('./src/mock/**/*')
     .pipe(gulp.dest('./dev/mock'))
 })
-
-gulp.task('default',['copyhtml','packscss','copylib','copymock','packjs','copyicons','server','watch'],()=>{
+//// copy mock
+gulp.task('copyimg', () => {
+  return gulp.src('./src/images/**/*')
+    .pipe(gulp.dest('./dev/images'))
+})
+//// copy swiper
+gulp.task('copyswiper', () => {
+  return gulp.src('./src/styles/swiper/*')
+    .pipe(gulp.dest('./dev/styles/swiper'))
+})
+gulp.task('default',['copyhtml','copyimg','packscss','copylib','copymock','packjs','copyicons','copyswiper','server','watch'],()=>{
 	console.log("all tasks!")
 })

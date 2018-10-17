@@ -1,0 +1,14 @@
+<div><h2>游记与话题</h2><a href="">更多</a></div>
+<ul>
+	{{#each list}}
+	<li>
+		<img class="lazy" src="images/ajax-loader.gif" data-echo="{{pic}}" >
+		<div>
+			<h3>{{title}}</h3>
+		    <div><a><img class="lazy" src="images/ajax-loader.gif" data-echo="{{auth.avatar}}"><span>{{auth.username}}</span></a><p><i class="yo-ico">&#xe6ad;</i><span>{{total_replies}}</span></p></div>
+		</div>
+	</li>
+	{{/each}}
+</ul>
+<button class="more-bbs">展开更多</button>
+
