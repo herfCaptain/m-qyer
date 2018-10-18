@@ -81,7 +81,7 @@ gulp.task("packjs",()=>{
 	.pipe(webpack({
 		mode:'development',
 		entry:{
-			app:['@babel/polyfill','./src/scripts/app.js'],
+			"app":['@babel/polyfill','./src/scripts/app.js'],
 			"app-mall":['@babel/polyfill','./src/scripts/app-mall.js'],
 			"app-server":['@babel/polyfill','./src/scripts/app-server.js']
 		},
