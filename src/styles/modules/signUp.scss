@@ -1,8 +1,11 @@
+body{
+    background: #0FB474;
+}
 header{
     height: .48rem;
     width: 100%;
     padding: 0 .2rem;
-    background: #00a076;
+    background: #00A076;
     @include flexbox();
     @include flex-direction(row);
     justify-content: space-between;
@@ -114,6 +117,7 @@ footer{
                 display: flex;
                 width: 60%;
                 height: 100%;
+                // margin-top:100px;
                 background: hsla(0,0%,100%,.2);
                 border-radius: .04rem;
                 border:0;
@@ -258,7 +262,11 @@ footer{
     .link{
         margin-top: 0.15rem;
         display: flex;
+        height:0.40rem;
         align-items: center;
+        margin-top:20px;
+        color:#0cbf79;
+        background-color:#fff;
         justify-content: center;
         i{
             margin: 0 .2rem;
