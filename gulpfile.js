@@ -26,6 +26,16 @@ gulp.task("server",()=>{
 //          '/api' : ''
 //          },
 			}),
+
+			proxy('/z',{
+				target:'http://dpl.qyer.com',
+				changeOrigin:true,
+				pathRewrite:{
+						'/^z':''
+				}
+		}),
+
+
 		  proxy('/x5',{
 //		  	target:'https://m.lagou.com/',
 				target:'https://m.maizuo.com',
@@ -69,7 +79,8 @@ gulp.task("packscss",()=>{
 		"./src/styles/app.scss",
 		"./src/styles/app-mall.scss",
 		"./src/styles/app-server.scss",
-		"./src/styles/app-signUp.scss"
+		"./src/styles/app-signUp.scss",
+		"./src/styles/app-submit.scss"
 	])
 	.pipe(sass().on("error",sass.logError))
 	.pipe(gulp.dest("./dev/styles"))
@@ -85,7 +96,8 @@ gulp.task("packjs",()=>{
 			"app":['@babel/polyfill','./src/scripts/app.js'],
 			"app-mall":['@babel/polyfill','./src/scripts/app-mall.js'],
 			"app-server":['@babel/polyfill','./src/scripts/app-server.js'],
-			"app-signUp":['@babel/polyfill','./src/scripts/app-signUp.js']
+			"app-signUp":['@babel/polyfill','./src/scripts/app-signUp.js'],
+			"app-submit":['@babel/polyfill','./src/scripts/app-submit.js']
 		},
 		output:{
 			filename:"[name].js"
