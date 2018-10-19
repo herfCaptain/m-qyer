@@ -46,16 +46,16 @@ gulp.task("server",()=>{
 //          },
 		  	
 		  }),
-		   proxy('/qcross',{
+		   proxy('/search',{
 		   	//http://www.qyer.com/qcross/home/index.php?action=recommend&timer=1539683491158&ajaxID=59b0b70acebeb65c1882399e
-		  	target:'http://www.qyer.com/',
+		  	target:'https://m.qyer.com',
 		  	//target:'http://localhost:3000',
 		  	changeOrigin:true,
-//		  	pathRewrite: {
-//          '/api' : ''
-//          },
+		  	pathRewrite: {
+            '/search' : ''
+            },
 		  	
-		  }),
+		  })
 		]
 	}))
 })
