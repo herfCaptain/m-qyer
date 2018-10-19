@@ -1,12 +1,13 @@
 <div class="server-containers">
     <header>
+        {{#each list1}}
         <div>
-            <img src="https://pic.qyer.com/lastminute/library/2015/07/30/55b997e482940.jpg?imageView2/1/w/640/h/360"/>
+            <img src="{{img}}"/>
         </div>
-        <h1>上海直飞沙巴6-7天往返含税机票(含1-2晚市区附近品质酒店住宿+往返共30kg免费行李额)</h1>
+        <h1>{{tit}}</h1>
         <div class="info">
             <div class="price">
-                <em>799</em>元起
+                <em>{{price}}</em>元起
             </div>
             <div class="floorGuide">
                 <a href="##">低价指南</a>
@@ -14,6 +15,7 @@
             <div class="browse">浏览 1054484</div>
             <div class="sold">已售 1592份</div>
         </div>
+        {{/each}}
     </header>
     <section class="APP">
         <a href="##">
@@ -61,7 +63,7 @@
                 </div>
             </div>
             <div class="checkAll">
-                <a href="##">查看全部评价</a>
+                <a>查看全部评价</a>
             </div>
         </div>
     </section>
@@ -73,8 +75,8 @@
             <i class="yo-ico">&#xe64c;</i>
             <span>收藏</span>
         </div>
-        <div>
-            <span>立即预定</span>
+        <div class="order">
+            <!-- <span><a href="##">立即预定</a></span> -->
         </div>
     </footer>
 </div>

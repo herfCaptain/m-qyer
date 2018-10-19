@@ -8,6 +8,7 @@ const render = async () => {
     let html = template({ list })
     $("#Mall").html(html);
     changeTab();
+    autoPlay();
 }
 
 const changeTab = () => {
@@ -17,6 +18,24 @@ const changeTab = () => {
         $(this).addClass('active').siblings().removeClass('active')
     })
 }
+
+ const autoPlay = () => {
+    console.log(2)
+    var mySwiper = new Swiper ('.swiper-container', {
+        direction: 'horizontal', 
+        loop: true, // 循环模式选项
+        autoplay:true,
+        autoplay:{
+            disableOnInteraction:false,
+            delay:2000
+        },
+        // 如果需要分页器
+        pagination: {
+            el: '.swiper-pagination',
+            clickable:true
+        },
+      })
+ }
 
 export default {
     render
