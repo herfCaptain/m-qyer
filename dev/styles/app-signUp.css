@@ -1202,6 +1202,8 @@ header {
   justify-content: space-between;
   align-items: center;
   color: #fff; }
+  header div:first-child {
+    float: left; }
   header div:first-child i {
     width: 0.2rem;
     height: 0.17rem;
@@ -1213,6 +1215,8 @@ header {
     font-size: .16rem; }
   header div:last-child {
     text-align: center;
+    float: right;
+    background: red;
     width: .48rem;
     border: 1px solid #fff;
     border-radius: 10%; }
