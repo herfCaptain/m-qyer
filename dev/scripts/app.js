@@ -3390,7 +3390,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _bab
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _views_search_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../views/search.html */ \"./src/scripts/views/search.html\");\n/* harmony import */ var _views_search_html__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_views_search_html__WEBPACK_IMPORTED_MODULE_0__);\n\n\nvar render = function render() {\n  $('.index-search').html(_views_search_html__WEBPACK_IMPORTED_MODULE_0___default.a);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  render: render\n});\n\n//# sourceURL=webpack:///./src/scripts/controlllers/search.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"./node_modules/@babel/runtime/regenerator/index.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ \"./node_modules/@babel/runtime/helpers/asyncToGenerator.js\");\n/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _views_search_html__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../views/search.html */ \"./src/scripts/views/search.html\");\n/* harmony import */ var _views_search_html__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_views_search_html__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _views_search_real_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../views/search-real.html */ \"./src/scripts/views/search-real.html\");\n/* harmony import */ var _views_search_real_html__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_views_search_real_html__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _views_search_res_html__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../views/search-res.html */ \"./src/scripts/views/search-res.html\");\n/* harmony import */ var _views_search_res_html__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_views_search_res_html__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _models_index_search__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../models/index-search */ \"./src/scripts/models/index-search.js\");\n\n\n\n\n\n\n\nvar render = function render() {\n  $('.index-search').html(_views_search_html__WEBPACK_IMPORTED_MODULE_2___default.a);\n  searchclick();\n};\n\nvar searchclick = function searchclick() {\n  $(\".index-search>input\").on(\"click\", function () {\n    $(\".search-real\").css(\"display\", \"block\");\n    $('.search-real').html(_views_search_real_html__WEBPACK_IMPORTED_MODULE_3___default.a);\n    search_begin();\n    back();\n  });\n};\n\nvar search_begin = function search_begin() {\n  $(\".search-begin\").on(\"click\",\n  /*#__PURE__*/\n  _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1___default()(\n  /*#__PURE__*/\n  _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {\n    var keyword, result, list, template, html;\n    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            keyword = $(\".search-input\").val();\n            _context.next = 3;\n            return _models_index_search__WEBPACK_IMPORTED_MODULE_5__[\"default\"].searchlist(keyword);\n\n          case 3:\n            result = _context.sent;\n            //console.log(result)\n            list = JSON.parse(result).data;\n            template = Handlebars.compile(_views_search_res_html__WEBPACK_IMPORTED_MODULE_4___default.a);\n            html = template({\n              list: list\n            });\n            $('.search-res-list').html(html);\n\n          case 8:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, _callee, this);\n  })));\n};\n\nvar back = function back() {\n  $(\".back\").on(\"click\", function () {\n    $(\".search-real\").css(\"display\", \"none\");\n  });\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  render: render\n});\n\n//# sourceURL=webpack:///./src/scripts/controlllers/search.js?");
 
 /***/ }),
 
@@ -3418,6 +3418,18 @@ eval("__webpack_require__.r(__webpack_exports__);\nvar productlist = function pr
 
 /***/ }),
 
+/***/ "./src/scripts/models/index-search.js":
+/*!********************************************!*\
+  !*** ./src/scripts/models/index-search.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar searchlist = function searchlist(keyword) {\n  var date1 = new Date();\n  return $.ajax({\n    //url:\"/api/listmore.json?pageNo=2&pageSize=15\",\n    //http://www.qyer.com/qcross/home/index/recommendbiz?page=1\n    url: \"/search/ajax.php?action=ajaxsearch&wd=\" + keyword + \"&popsearch=1\",\n    success: function success(result) {\n      return result;\n    },\n    error: function error(err) {\n      console.log(err);\n    }\n  });\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  searchlist: searchlist\n});\n\n//# sourceURL=webpack:///./src/scripts/models/index-search.js?");
+
+/***/ }),
+
 /***/ "./src/scripts/views/banner.html":
 /*!***************************************!*\
   !*** ./src/scripts/views/banner.html ***!
@@ -3436,7 +3448,7 @@ eval("module.exports = \"<div class=\\\"swiper-container\\\">    <div class=\\\"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = \"<section class=\\\"home-containers\\\">\t<div>\t<header class=\\\"m-header\\\">\t\t<div class=\\\"logo\\\"><img src=\\\"images/logo.png\\\"></div>\t\t<div class=\\\"userinfo\\\">\t\t\t<i class=\\\"yo-ico\\\">&#xe657;</i><a href=\\\"signUpBox.html\\\"><span >我的</span></a>\t\t</div>\t</header>\t<main>\t\t<section class=\\\"index-banner\\\"></section>\t\t<section class=\\\"index-search\\\"></section>\t\t<section class=\\\"index-nav\\\"></section>\t\t<section class=\\\"index-qyer-mall\\\"></section>\t\t<section class=\\\"index-product\\\"></section>\t\t<section class=\\\"index-bbs\\\"></section>\t</main>\t<footer class=\\\"m-index-footer\\\">\t\t<p class=\\\"links\\\">\t\t\t<a href=\\\"javascript:;\\\">手机版</a>\t\t\t<a href=\\\"javascript:;\\\">电脑版</a>\t\t\t<a href=\\\"//app.qyer.com\\\">APP</a>\t\t\t<a href=\\\"/feedback\\\">意见反馈</a>\t\t</p>\t\t<p class=\\\"copy-right\\\">2004-2018 ©北京穷游天下科技发展有限公司™<br>京ICP备12003524号&nbsp;|&nbsp;电话 010 64554669</p>\t</footer>    </div></section>\"\n\n//# sourceURL=webpack:///./src/scripts/views/home.html?");
+eval("module.exports = \"<section class=\\\"home-containers\\\">\t<div>\t<header class=\\\"m-header\\\">\t\t<div class=\\\"logo\\\"><img src=\\\"images/logo.png\\\"></div>\t\t<div class=\\\"userinfo\\\">\t\t\t<i class=\\\"yo-ico\\\">&#xe657;</i><a href=\\\"signUpBox.html\\\"><span >我的</span></a>\t\t</div>\t</header>\t<main>\t\t<section class=\\\"index-banner\\\"></section>\t\t<section class=\\\"index-search\\\"></section>\t\t<section class=\\\"index-nav\\\"></section>\t\t<section class=\\\"index-qyer-mall\\\"></section>\t\t<section class=\\\"index-product\\\"></section>\t\t<section class=\\\"index-bbs\\\"></section>\t\t\t</main>\t<footer class=\\\"m-index-footer\\\">\t\t<p class=\\\"links\\\">\t\t\t<a href=\\\"javascript:;\\\">手机版</a>\t\t\t<a href=\\\"javascript:;\\\">电脑版</a>\t\t\t<a href=\\\"//app.qyer.com\\\">APP</a>\t\t\t<a href=\\\"/feedback\\\">意见反馈</a>\t\t</p>\t\t<p class=\\\"copy-right\\\">2004-2018 ©北京穷游天下科技发展有限公司™<br>京ICP备12003524号&nbsp;|&nbsp;电话 010 64554669</p>\t</footer>\t<div class=\\\"search-real\\\"></div>    </div></section>\"\n\n//# sourceURL=webpack:///./src/scripts/views/home.html?");
 
 /***/ }),
 
@@ -3481,6 +3493,28 @@ eval("module.exports = \"<div class=\\\"index-mall-title\\\">\t<h2>穷游商城<
 /***/ (function(module, exports) {
 
 eval("module.exports = \"<h2>精选折扣 每日更新</h2><ul>\t{{#each list}}\t<li>\t\t<img class=\\\"lazy\\\" src=\\\"images/ajax-loader.gif\\\" data-echo=\\\"{{pic}}/300x200\\\" >\t\t<h3>{{title}}</h3>\t\t<p class=\\\"price\\\">{{{price}}}</p>\t</li>\t{{/each}}</ul>\"\n\n//# sourceURL=webpack:///./src/scripts/views/product.html?");
+
+/***/ }),
+
+/***/ "./src/scripts/views/search-real.html":
+/*!********************************************!*\
+  !*** ./src/scripts/views/search-real.html ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"<div class=\\\"search-bar\\\">\t<i class=\\\"yo-ico back\\\">&#xe697;</i>\t<input type=\\\"text\\\" class=\\\"search-input\\\">\t<button class=\\\"search-begin\\\">搜索</button>\t</div><div class=\\\"search-res\\\">\t<ul  class=\\\"search-res-list\\\">\t\t\t</ul></div>\"\n\n//# sourceURL=webpack:///./src/scripts/views/search-real.html?");
+
+/***/ }),
+
+/***/ "./src/scripts/views/search-res.html":
+/*!*******************************************!*\
+  !*** ./src/scripts/views/search-res.html ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"{{#each list}}<li>\t{{{val}}}</li>{{/each}}\"\n\n//# sourceURL=webpack:///./src/scripts/views/search-res.html?");
 
 /***/ }),
 
