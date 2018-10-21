@@ -2,9 +2,11 @@
 <ul>
 	{{#each list}}
 	<li>
+		<a href="reserve.html?{{id}}">
 		<img class="lazy" src="images/ajax-loader.gif" data-echo="{{pic}}/300x200" >
 		<h3>{{title}}</h3>
 		<p class="price">{{{price}}}</p>
+		</a>
 	</li>
 	{{/each}}
 </ul>

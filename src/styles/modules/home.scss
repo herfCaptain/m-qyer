@@ -169,6 +169,7 @@
                     }
                     h3{
                         @include ellipsis(null, 2);
+                        color: #333;
                     }
                 }
             }
