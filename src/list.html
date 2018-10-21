@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./styles/list.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <header>
+            <i class="yo-ico">&#xe697;</i>
+            <h6>穷游商城</h6>
+        </header>
+        <main>
+            <div class="top">
+                上海直飞沙巴6-7天往返含税机票(含1-2晚市区附近品质酒店住宿+往返共30kg免费行李额)
+            </div>
+            <div class="content">
+                <h2>产品类型</h2>
+                 {{#each data}}
+                <li>
+                   {{title}}
+                </li>
+                {{/each}}
+            </div>
+        </main>
+        <footer>
+            <div class="price">
+                <i class="yo-ico">&#xe662;</i>
+                <span>0</span>
+            </div>
+            <div class="next">
+                <h5>下一步</h5>，填写信息
+            </div>
+        </footer>
+    </div>
+</body>
+
+<script src="libs/handlebars.runtime-v4.0.12.js"></script>
+<script src="libs/zepto.min.js"></script>
+<script src="scripts/app_list.js"></script>
+</html>

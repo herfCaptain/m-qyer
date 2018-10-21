@@ -5,6 +5,7 @@ import Router from "./utils/router"
 
 submitController.render()
 
+
 const router = new Router()
 router.init()
 router.route('#number',numberController.render)
