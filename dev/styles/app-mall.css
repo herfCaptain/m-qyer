@@ -767,6 +767,8 @@ a {
       .home-containers .m-header .userinfo i {
         font-size: 0.3rem;
         font-weight: 800; }
+      .home-containers .m-header .userinfo a {
+        color: #fff !important; }
   .home-containers footer {
     height: 0.88rem;
     width: 100%;

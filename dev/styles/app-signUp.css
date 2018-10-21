@@ -767,6 +767,8 @@ a {
       .home-containers .m-header .userinfo i {
         font-size: 0.3rem;
         font-weight: 800; }
+      .home-containers .m-header .userinfo a {
+        color: #fff !important; }
   .home-containers footer {
     height: 0.88rem;
     width: 100%;
@@ -1205,24 +1207,15 @@ header {
   color: #fff; }
   header div:first-child {
     float: left; }
-  header div:first-child i {
-    width: 0.2rem;
-    height: 0.17rem;
-    font-size: .2rem;
-    margin: 0 .32rem 0 0; }
   header .title {
     width: 0.32rem;
     height: 0.21rem;
     font-size: .16rem; }
-  header div:last-child {
-    text-align: center;
+  header .comeback {
+    float: left; }
+  header .tit {
     float: right;
-    width: .48rem;
-    border: 1px solid #fff;
-    border-radius: 10%; }
-  header div:last-child a {
-    color: #fff;
-    line-height: .26rem; }
+    margin-left: 1.30rem; }
 
 main .warn {
   padding: .3rem .2rem 0;
