@@ -3230,7 +3230,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _con
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _views_signUp_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../views/signUp.html */ \"./src/scripts/views/signUp.html\");\n/* harmony import */ var _views_signUp_html__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_views_signUp_html__WEBPACK_IMPORTED_MODULE_0__);\n\n\nvar render = function render() {\n  // document.querySelector(\"#root\").firstChild.innerHTML += messageTpl\n  document.querySelector(\"#box\").innerHTML = _views_signUp_html__WEBPACK_IMPORTED_MODULE_0___default.a;\n  console.log(document.querySelector(\"#box\"));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  render: render\n});\n\n//# sourceURL=webpack:///./src/scripts/controlllers/signUp.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _views_signUp_html__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../views/signUp.html */ \"./src/scripts/views/signUp.html\");\n/* harmony import */ var _views_signUp_html__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_views_signUp_html__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _views_signUpHead_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../views/signUpHead.html */ \"./src/scripts/views/signUpHead.html\");\n/* harmony import */ var _views_signUpHead_html__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_views_signUpHead_html__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nvar render = function render() {\n  // document.querySelector(\"#root\").firstChild.innerHTML += messageTpl\n  document.querySelector(\"#box\").innerHTML = _views_signUp_html__WEBPACK_IMPORTED_MODULE_0___default.a;\n  document.querySelector(\"#head\").innerHTML = _views_signUpHead_html__WEBPACK_IMPORTED_MODULE_1___default.a;\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  render: render\n});\n\n//# sourceURL=webpack:///./src/scripts/controlllers/signUp.js?");
 
 /***/ }),
 
@@ -3242,6 +3242,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _vie
 /***/ (function(module, exports) {
 
 eval("module.exports = \"<div class=\\\"mes-content\\\">    <div class=\\\"phone-inp\\\">        <div class=\\\"phone-inp-L\\\">            <div class=\\\"country-code\\\">+86<i class=\\\"yo-ico\\\">&#xe6dc;</i></div>        </div>        <div class=\\\"phone-inp-R\\\">            <div class=\\\"left\\\"></div>            <input type=\\\"text\\\" name=\\\"\\\" id=\\\"\\\" placeholder=\\\"手机号\\\">        </div>    </div>    <div class=\\\"pic-inp\\\">        <div>            <i class=\\\"yo-ico\\\">&#xe669;</i>            <input type=\\\"text\\\" name=\\\"\\\" id=\\\"\\\" placeholder=\\\"图片验证码\\\">        </div>        <div class=\\\"pic\\\">            <img src=\\\"https://m.qyer.com/passport/captcha?scene=smslogin&timer=1539227026180\\\" alt=\\\"\\\">        </div>    </div>    <div class=\\\"code-inp\\\">        <div>            <i class=\\\"yo-ico\\\">&#xe669;</i>            <input type=\\\"text\\\" name=\\\"\\\" id=\\\"\\\" placeholder=\\\"短信验证码\\\">        </div>        <div class=\\\"code\\\">            <a href=\\\"##\\\">                发送验证码            </a>        </div>    </div>        <div class=\\\"link\\\">        <div class=\\\"signUP\\\">        立即注册        </div>    </div>\"\n\n//# sourceURL=webpack:///./src/scripts/views/signUp.html?");
+
+/***/ }),
+
+/***/ "./src/scripts/views/signUpHead.html":
+/*!*******************************************!*\
+  !*** ./src/scripts/views/signUpHead.html ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"<div class=\\\"nav\\\">    <div class=\\\"comeBack\\\">        <i class=\\\"yo-ico\\\">&#xe6b6;</i>    </div>    <div>        <p>注册</p>    </div></div>\"\n\n//# sourceURL=webpack:///./src/scripts/views/signUpHead.html?");
 
 /***/ }),
 
