@@ -3492,7 +3492,7 @@ eval("module.exports = \"<div class=\\\"index-mall-title\\\">\t<h2>穷游商城<
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = \"<h2>精选折扣 每日更新</h2><ul>\t{{#each list}}\t<li>\t\t<img class=\\\"lazy\\\" src=\\\"images/ajax-loader.gif\\\" data-echo=\\\"{{pic}}/300x200\\\" >\t\t<h3>{{title}}</h3>\t\t<p class=\\\"price\\\">{{{price}}}</p>\t</li>\t{{/each}}</ul>\"\n\n//# sourceURL=webpack:///./src/scripts/views/product.html?");
+eval("module.exports = \"<h2>精选折扣 每日更新</h2><ul>\t{{#each list}}\t<li>\t\t<a href=\\\"reserve.html?{{id}}\\\">\t\t<img class=\\\"lazy\\\" src=\\\"images/ajax-loader.gif\\\" data-echo=\\\"{{pic}}/300x200\\\" >\t\t<h3>{{title}}</h3>\t\t<p class=\\\"price\\\">{{{price}}}</p>\t\t</a>\t</li>\t{{/each}}</ul>\"\n\n//# sourceURL=webpack:///./src/scripts/views/product.html?");
 
 /***/ }),
 
