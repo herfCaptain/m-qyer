@@ -80,7 +80,8 @@ gulp.task("packscss",()=>{
 		"./src/styles/app-mall.scss",
 		"./src/styles/app-server.scss",
 		"./src/styles/app-signUp.scss",
-		"./src/styles/app-submit.scss"
+		"./src/styles/app-submit.scss",
+		"./src/styles/list.scss"
 	])
 	.pipe(sass().on("error",sass.logError))
 	.pipe(gulp.dest("./dev/styles"))
@@ -97,7 +98,8 @@ gulp.task("packjs",()=>{
 			"app-mall":['@babel/polyfill','./src/scripts/app-mall.js'],
 			"app-server":['@babel/polyfill','./src/scripts/app-server.js'],
 			"app-signUp":['@babel/polyfill','./src/scripts/app-signUp.js'],
-			"app-submit":['@babel/polyfill','./src/scripts/app-submit.js']
+			"app-submit":['@babel/polyfill','./src/scripts/app-submit.js'],
+			"app_list":['@babel/polyfill','./src/scripts/app_list.js']
 		},
 		output:{
 			filename:"[name].js"

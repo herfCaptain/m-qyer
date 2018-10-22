@@ -1,11 +1,11 @@
 @import './yo/usage/core/reset.scss';
 @font-face {
     font-family: 'yofont';
-    src: url('/iconfont/iconfont.eot');
-    src: url('/iconfont/iconfont.eot?#iefix') format('embedded-opentype'),
-    url('/iconfont/iconfont.woff') format('woff'),
-    url('/iconfont/iconfont.ttf') format('truetype'),
-    url('/iconfont/iconfont.svg#iconfont') format('svg');
+    src: url('/iconfont.eot');
+    src: url('/iconfonts/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('/iconfonts/iconfont.woff') format('woff'),
+    url('/iconfonts/iconfont.ttf') format('truetype'),
+    url('/iconfonts/iconfont.svg#iconfont') format('svg');
   }
   header{
       width: 100%;
