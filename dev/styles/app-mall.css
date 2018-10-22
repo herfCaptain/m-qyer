@@ -767,6 +767,8 @@ a {
       .home-containers .m-header .userinfo i {
         font-size: 0.3rem;
         font-weight: 800; }
+      .home-containers .m-header .userinfo a {
+        color: #fff !important; }
   .home-containers footer {
     height: 0.88rem;
     width: 100%;
@@ -942,7 +944,8 @@ a {
             -webkit-flex-direction: column;
             flex-direction: column;
             word-wrap: break-word;
-            word-break: break-all; }
+            word-break: break-all;
+            color: #333; }
     .home-containers main .index-bbs {
       background: #fff;
       margin-top: 0.1rem;

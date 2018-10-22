@@ -14,29 +14,35 @@ header{
     div:first-child{
         float:left;
     }
-    div:first-child i{
-        width: 0.2rem;
-        height: 0.17rem;
-        font-size: .2rem;
-        margin: 0 .32rem 0 0;
-    };
+    // div:first-child i{
+    //     width: 0.2rem;
+    //     height: 0.17rem;
+    //     font-size: .2rem;
+    //     margin: 0 .32rem 0 0;
+    // };
     .title{
         width: 0.32rem;
         height: 0.21rem;
         font-size: .16rem;
     }
-    div:last-child{
-        text-align: center;
+    .comeback{
+        float:left;
+    }
+    .tit{
         float:right;
-        background:red;
-        width: .48rem;
-        border: 1px solid #fff;
-        border-radius:10%; 
+        margin-left: 1.30rem;
     }
-    div:last-child a{
-        color: #fff;
-        line-height: .26rem;
-    }
+    // div:last-child{
+    //     text-align: center;
+    //     float:right;
+    //     width: .48rem;
+    //     border: 1px solid #fff;
+    //     border-radius:10%; 
+    // }
+    // div:last-child a{
+    //     color: #fff;
+    //     line-height: .26rem;
+    // }
 }
 main{
     .warn{
