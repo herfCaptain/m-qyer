@@ -9,6 +9,8 @@ const changeTab = () =>{
     $(".comeBack").click(function(){
         history.back()
     })
+    
+
     $('main>.select>div').on('tap',function(){
         let hashs = ['#number','#message']
         location.hash = hashs[$(this).index()]

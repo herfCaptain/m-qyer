@@ -11,6 +11,7 @@ const render = () => {
     $(".comeBack").click(function () {
         history.back()
     })
+    
     $(".link").click(function () {
         // alert(1)
         var num = $("#phone").val()
